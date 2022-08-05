@@ -1,5 +1,5 @@
 
-import { Routes, Route, BrowserRouter as Router, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
@@ -14,20 +14,18 @@ import { Recipe } from './pages/Recipe';
 function App() {
   return (
     <>
-      <Router basename='/react-shop'>
-        <Header />
-        <main className="container content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/category/:name" element={<Category />} />
-            <Route path="/meal/:id" element={<Recipe />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </Router>
+      <Header />
+      <main className="container content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/category/:name" element={<Category />} />
+          <Route path="/meal/:id" element={<Recipe />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
 
   );
