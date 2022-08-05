@@ -1,5 +1,5 @@
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
